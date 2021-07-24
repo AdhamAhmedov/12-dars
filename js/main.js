@@ -27,11 +27,13 @@ for (var film of films) {
 	newDiscription.textContent = film.overview;
 
 	var newSpan = document.createElement("span");
-	newSpan.textContent = new Date(film.release_date);
 
-	// var data = new Date;
-	// var
-
+	var data = new Date(film.release_date);
+	var day = data.getDate();
+	var month = data.getMonth() + 1;
+	var year = data.getFullYear();
+	var aaaa = day + "." + month + "." + year + ".";
+	newSpan.textContent = aaaa;
 
 
 	var newInfo = document.createElement("h5");
@@ -52,4 +54,3 @@ for (var film of films) {
 };
 
 
-console.log(data);
